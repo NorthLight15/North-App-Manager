@@ -1,6 +1,7 @@
 import sys
 import json 
 import pull
+import installer
 import xml.etree.cElementTree as xmlet
 
 print("Application install manager for Linux")
@@ -11,4 +12,5 @@ userInput = input("User input: ")
 
 
 pull.SourcesListed(userInput)
+installer.downloadder()
 
