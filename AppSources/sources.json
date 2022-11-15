@@ -1,0 +1,16 @@
+ {
+   "Application": [
+
+      {
+         "id": "0001",
+         "name": "Visual Studio Code",
+         "link": "https://code.visualstudio.com/sha/download?build=stable&os=linux-x64"
+      },
+      {
+         "id": "0002",
+         "name":"Eclipse for JAVA",
+         "link":"https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-09/R/eclipse-java-2022-09-R-linux-gtk-x86_64.tar.gz&mirror_id=1045"
+
+      }
+   ]
+}
