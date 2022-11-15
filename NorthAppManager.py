@@ -1,13 +1,14 @@
 import sys
 import json 
 import pull
-
-userInput = input("User input: ")
+import xml.etree.cElementTree as xmlet
 
 print("Application install manager for Linux")
 print("-f for Mirror List")
-#### Tested code
 
-if userInput == "-f":
-    pull.SourcesListed()
+userInput = input("User input: ")
+#### Tested code ########
+
+
+pull.SourcesListed(userInput)
 

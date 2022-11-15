@@ -1,0 +1,14 @@
+<Applications>
+    <code>
+        <name>"Visual Studio Code"</name> 
+        <Developer>Microsoft</Developer>
+        <link>Testedlink</link>
+        <short>code</short>
+    </code>
+
+    <eclipse>
+        <name>Eclipse</name> 
+        <Developer>Eclipse Fondation</Developer>
+        <link>Testedlink</link>
+    </eclipse>
+</Applications>

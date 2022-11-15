@@ -1,11 +1,19 @@
 import random
 import json
+import xml.etree.cElementTree as xmlet
 
-def SourcesListed():
-    appSources = open("AppSources/sources.json")
-    data = json.load(appSources)
+def SourcesListed(userInput):
 
-    for i in data["Application"]:
-        print(i)
+    tree = xmlet.parse("AppSources/sources.xml")
+    sources = tree.getroot()
 
-    appSources.close()
+    tag = sources.tag
+    attr = sources.attrib
+
+    # Application find for Searching code
+
+    try:
+        for i in sources.findall(userInput): # searches for a given value
+            print(i.find("link").text) # Receives and uses the link
+    except:
+        print("Not Result")
