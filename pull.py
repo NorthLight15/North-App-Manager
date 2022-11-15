@@ -13,7 +13,9 @@ def SourcesListed(userInput):
     # Application find for Searching code
 
     try:
-        for i in sources.findall(userInput): # searches for a given value
-            print(i.find("link").text) # Receives and uses the link
+        for value in sources.findall(userInput): # searches for a given value
+            app = value.find("link").text # Receives and uses the link
+
+            return app
     except:
         print("Not Result")
