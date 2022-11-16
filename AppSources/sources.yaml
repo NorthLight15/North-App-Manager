@@ -14,6 +14,6 @@ code:
 
 eclipse:
 - Eclipse Fondation
-- https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-09/R/eclipse-java-2022-09-R-linux-gtk-x86_64.tar.gz&mirror_id=1045
+- https://ftp.halifax.rwth-aachen.de/eclipse/technology/epp/downloads/release/2022-09/R/eclipse-java-2022-09-R-linux-gtk-x86_64.tar.gz
 - .tar.xz
-- Eclipse
+- eclipse
