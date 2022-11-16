@@ -7,9 +7,9 @@ print("Application install manager for Linux")
 print("-f for Mirror List")
 
 AppName = input("Application: ")
-fileName = input("Downloaded file name:")
+#fileName = input("Downloaded file name:")
 #### Tested code ########
 
 
-pull.SourcesDownload(AppName, fileName)
+pull.SourcesDownload(AppName)
 

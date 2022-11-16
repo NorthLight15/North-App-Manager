@@ -1,23 +1,25 @@
 import random
-import json
 import requests as req
-import xml.etree.cElementTree as xmlet
+import yaml
+from yaml import Loader
+import urllib.request
+def SourcesDownload(App):
 
-def SourcesDownload(App, File):
-
-    tree = xmlet.parse("AppSources/sources.xml")
-    sources = tree.getroot()
-
-    tag = sources.tag
-    attr = sources.attrib
+    file = open("AppSources/sources.yaml")
+    data = yaml.load(file, Loader=Loader)
 
     # Application find for Searching code
+    AppName = data[App][0]
+    link = data[App][1]
+    filesType = data[App][2]
 
-    try:
-        for value in sources.findall(App): # searches for a given value
-            AppLink = value.find("link").text # Receives and uses the link
-            r = req.get(AppLink, allow_redirects=True)
-            open(File, "wb").write(r.content) # Not tested
+    url = link
+    r = req.get(url)
+    open("code.tar.xz", 'wb').write(r.content) # Burada
 
-    except:
-        print("Not Result")
+# Dosya ismi belirlemede kaldın
+
+
+
+
+                            
