@@ -1,9 +1,13 @@
+import os
+import time
 import sys
 import json 
-import pull
-import xml.etree.cElementTree as xmlet
+import installer
+import configration
+
 
 print("Application install manager for Linux")
+
 
 AppName = input("Application: ")
 
@@ -11,6 +15,22 @@ AppName = input("Application: ")
 
 
 if __name__ == '__main__':
-    
-    pull.SourcesDownload(AppName)
+        
+    os.system("clear")
+    try:
+        installer.apt_installer(AppName)
+        time.sleep(0.5)
+    except: 
+        installer.apt_get_installer(AppName)
+        time.sleep(0.5)
+    else:
+        installer.dnf_installer(AppName)
+        time.sleep(0.5)
+        try:
+            installer.main_sources_installer(AppName)
+        except:
+            print("Application not founded")
+                    
+
+
 
