@@ -4,7 +4,7 @@ import sys
 import json 
 import colorfont
 import installer
-
+import SetupAssistant
 
 print("Application install manager for Linux")
 
@@ -16,8 +16,6 @@ Succsess = colorfont.colors.SUCCSESS
 
 
 AppName = input("Application: ")
-
-#### Tested code ########
 
 
 if __name__ == '__main__':
@@ -33,10 +31,12 @@ if __name__ == '__main__':
         installer.dnf_installer(AppName)
         time.sleep(0.5)
         try:
+            print(f"{OkeyColor}Wait...{NormalColor}")
             installer.main_sources_installer(AppName)
-            print(f"{Succsess}Installed....{NormalColor}")
+            print(f"{Succsess}Installed and Succsess configration...{NormalColor}")
         except:
-            print(f"{failColor}Application not founded{NormalColor}")
+                print(f"{warningColor}Application not found..{NormalColor}")
+
                     
 
 

@@ -2,6 +2,7 @@ import time
 import subprocess
 import random
 import requests as req
+import SetupAssistant
 import yaml
 import os
 import colorfont
@@ -26,8 +27,18 @@ def main_sources_installer(App):
     filesName = f"{AppName}{filesType}" # Combines the application name with the file type
 
     url = link
-    r = req.get(url)
-    open(f"{filesName}", 'wb').write(r.content)
+    try:
+        print(f"{Succsess}Download started... Please not closed{NormalColor}")
+        r = req.get(url)
+    except:
+        print(f"{failColor}We encountered an unknown error...{NormalColor}")
+    try:
+        print(f"{OkeyColor}Downloading and saving file...{NormalColor}")
+        open(f"{filesName}", 'wb').write(r.content)
+        SetupAssistant.setup(AppName)
+    except:
+        print(f"{failColor}There was a problem saving the file{NormalColor}")
+
 
 def apt_installer(App):
    

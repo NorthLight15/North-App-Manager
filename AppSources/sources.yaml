@@ -3,19 +3,21 @@
 #Application Name:
 # - Developer
 # - Direct Download Link
-# - Files type(tar.xz recommended)
+# - Files type(tar.gz recommended)
+# - Files Full name
 
 
 code:
 - Microsoft 
 - https://code.visualstudio.com/sha/download?build=stable&os=linux-x64
-- .tar.xz
-- vscode 
+- .tar.gz
+- vscode
+-  
 
 eclipse:
 - Eclipse Fondation
 - https://ftp.halifax.rwth-aachen.de/eclipse/technology/epp/downloads/release/2022-09/R/eclipse-java-2022-09-R-linux-gtk-x86_64.tar.gz
-- .tar.xz
+- .tar.gz
 - eclipse
 
 Tested:
