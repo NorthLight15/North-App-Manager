@@ -17,3 +17,10 @@ eclipse:
 - https://ftp.halifax.rwth-aachen.de/eclipse/technology/epp/downloads/release/2022-09/R/eclipse-java-2022-09-R-linux-gtk-x86_64.tar.gz
 - .tar.xz
 - eclipse
+
+Tested:
+
+- Test123
+- https://github.com/LuNiZz/siber-guvenlik-sss/blob/master/README.md
+- .md
+- testedfile

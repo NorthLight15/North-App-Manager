@@ -4,8 +4,14 @@ import random
 import requests as req
 import yaml
 import os
+import colorfont
 from yaml import Loader
 
+warningColor = colorfont.colors.WARNING
+failColor = colorfont.colors.FAIL
+NormalColor = colorfont.colors.END
+OkeyColor = colorfont.colors.OKEY
+Succsess = colorfont.colors.SUCCSESS
 
 def main_sources_installer(App):
 
@@ -25,21 +31,26 @@ def main_sources_installer(App):
 
 def apt_installer(App):
    
+    print(f"{OkeyColor}Trying apt{NormalColor}")
     try:              
-        subprocess.check_call(f"sudo apt install {App}", shell=True)         
+        subprocess.check_call(f"sudo apt install {App}", shell=True)
+        print(f"{Succsess}Downloaded...{NormalColor}")         
     except (OSError, subprocess.SubprocessError): 
-        print("apt not working..")             
+        print(f"{warningColor}apt not working..{NormalColor}")             
 
 def apt_get_installer(App):
+        print(f"{OkeyColor}Trying apt-get{NormalColor}")
         try:              
-            subprocess.check_call(f"sudo apt-get install {App}", shell=True)         
+            subprocess.check_call(f"sudo apt-get install {App}", shell=True)
+            print("")         
         except (OSError, subprocess.SubprocessError): 
-            print("apt-get not working..")
+            print(f"{warningColor}apt-get not working..{NormalColor}")
 
 def dnf_installer(App):
+        print(f"{OkeyColor}Trying dnf{NormalColor}")
         try:              
             subprocess.check_call(f"sudo dnf install {App}", shell=True)         
         except (OSError, subprocess.SubprocessError): 
-            print("dnf not working..")
+            print(f"{warningColor}dnf not working..{NormalColor}")
 
 

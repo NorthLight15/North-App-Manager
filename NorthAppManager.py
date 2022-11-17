@@ -2,11 +2,17 @@ import os
 import time
 import sys
 import json 
+import colorfont
 import installer
-import configration
 
 
 print("Application install manager for Linux")
+
+warningColor = colorfont.colors.WARNING
+failColor = colorfont.colors.FAIL
+NormalColor = colorfont.colors.END
+OkeyColor = colorfont.colors.OKEY
+Succsess = colorfont.colors.SUCCSESS
 
 
 AppName = input("Application: ")
@@ -28,8 +34,9 @@ if __name__ == '__main__':
         time.sleep(0.5)
         try:
             installer.main_sources_installer(AppName)
+            print(f"{Succsess}Installed....{NormalColor}")
         except:
-            print("Application not founded")
+            print(f"{failColor}Application not founded{NormalColor}")
                     
 
 
