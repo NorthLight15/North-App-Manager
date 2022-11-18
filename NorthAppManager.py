@@ -2,9 +2,10 @@ import os
 import time
 import sys
 import json 
-import colorfont
-import installer
-import SetupAssistant
+import SetupAssistant, installer, colorfont
+
+
+
 
 print("Application install manager for Linux")
 
@@ -29,6 +30,8 @@ if __name__ == '__main__':
         time.sleep(0.5)
     else:
         installer.dnf_installer(AppName)
+        time.sleep(0.5)
+        installer.pacman_installer(AppName)
         time.sleep(0.5)
         try:
             print(f"{OkeyColor}Wait...{NormalColor}")
