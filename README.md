@@ -1,6 +1,7 @@
 # North-App-Manager
 
 <p>Simple download and file manager for Linux users</p>
+<h4>Version status: Beta</h4>
 
 # What does it do
 
