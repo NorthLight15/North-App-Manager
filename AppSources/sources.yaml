@@ -17,3 +17,15 @@ eclipse:
 - https://ftp.halifax.rwth-aachen.de/eclipse/technology/epp/downloads/release/2022-09/R/eclipse-java-2022-09-R-linux-gtk-x86_64.tar.gz
 - .tar.gz
 - eclipse
+
+glue-git:
+- Elagoht
+- https://codeload.github.com/Elagoht/Glue/tar.gz/refs/tags/v1.0
+- .tar.gz
+- glue-git
+
+sudo-mice:
+- Elagoht
+- https://github.com/Elagoht/SudoMice/releases/download/v1.0/SudoMice.tar.gz
+- .tar.gz
+- sudo-mice
