@@ -9,7 +9,7 @@
 
 ## Fast and reliable
 
-<p> North App Manager It is primarily open source software, all sources are taken from /AppSources/sources.yaml` and all downloads are from the original manufacturer source.</p>
+<p> North App Manager It is primarily open source software, all sources are taken from AppSources/sources.yaml and all downloads are from the original manufacturer source.</p>
 
 ## How does it work
 
