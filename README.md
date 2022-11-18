@@ -31,6 +31,9 @@
  python3 NorthAppManager.py
  ```
  
+ ## or 
+ 
+ - [Download North App Manager ZIP file](https://github.com/NorthLight15/North-App-Manager/archive/refs/heads/main.zip)
  
 # Requirements 
 
