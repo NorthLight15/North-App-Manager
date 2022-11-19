@@ -12,7 +12,6 @@ from filesTypes import Paremeters as param
 from yaml import Loader
 
 
-
 warningColor = colorfont.colors.WARNING
 failColor = colorfont.colors.FAIL
 NormalColor = colorfont.colors.END
