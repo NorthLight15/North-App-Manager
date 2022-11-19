@@ -36,3 +36,17 @@ sudo-mice:
 - https://github.com/Elagoht/SudoMice/releases/download/v1.0/SudoMice.tar.gz
 - .tar.gz
 - sudo-mice
+
+discord:
+
+- discord
+- https://discord.com/api/download?platform=linux&format=tar.gz
+- .tar.gz
+- discord
+
+brave:
+
+- Brave
+- https://github.com/brave/brave-browser/releases/download/v1.47.85/brave-browser-nightly-1.47.85-linux-amd64.zip
+- .zip
+- brave

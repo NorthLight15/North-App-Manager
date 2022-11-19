@@ -2,19 +2,21 @@ import colorfont
 import subprocess
 import os
 
+errorMessage = f"{colorfont.colors.FAIL}There was a problem saving the file | It may be an unrecognized species, please let me know :) {colorfont.colors.END}"
+sucsessMessage = f"{colorfont.colors.SUCCSESS}Extract Succsess{colorfont.colors.END}"
 
-def setup(AppName):
 
-    failValue = 0
-
-    try:
-        subprocess.check_call(f"tar -xzf {AppName}.tar.gz", shell=True)
-        print(f"{colorfont.colors.SUCCSESS}Extract Succsess{colorfont.colors.END}")         
+def extracter(AppName, ftype, commands, parameters):
+        try:
+            subprocess.check_call(f"{commands} {parameters} {AppName}{ftype}", shell=True)
+            print(sucsessMessage)         
     
-    except (OSError, subprocess.SubprocessError): 
-        os.system("clear")
-        print(f"{colorfont.colors.FAIL}There was a problem saving the file | It may be an unrecognized species, please let me know :) {colorfont.colors.END}")
-        failValue = + failValue + 1   
-        print(failValue) 
+        except (OSError, subprocess.SubprocessError): 
+            os.system("clear")
+            print(errorMessage)
 
-        return failValue
+            
+                    
+    
+
+

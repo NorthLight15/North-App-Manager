@@ -6,6 +6,9 @@ import SetupAssistant
 import yaml
 import os
 import colorfont
+from filesTypes import FilesType as ft
+from filesTypes import Commands as cmd
+from filesTypes import Paremeters as param
 from yaml import Loader
 
 
@@ -26,6 +29,7 @@ def main_sources_installer(App):
     AppName = data[App][3] # Sources Application name
     link = data[App][1] # Sources Application direct link
     filesType = data[App][2] # Sources Application files type
+    
 
     filesName = f"{AppName}{filesType}" # Combines the application name with the file type
 
@@ -38,7 +42,25 @@ def main_sources_installer(App):
     try:
         print(f"{OkeyColor}Downloading and saving file...{NormalColor}")
         open(f"{filesName}", 'wb').write(r.content)
-        SetupAssistant.setup(AppName)
+        
+        if filesType == ft.tar_gz:
+            SetupAssistant.extracter(param.Paremeter_tar_gz,cmd.command_tar_gz,AppName, filesType)
+
+        if filesType == ft.tar_xz:
+            SetupAssistant.extracter(param.Parameter_tar_xz,cmd.command_tar_xz,AppName, filesType)
+        
+        if filesType == ft.deb:
+            SetupAssistant.extracter(param.Parameter_deb,cmd.commnad_deb,AppName, filesType)
+        
+        if filesType == ft.rpm:
+            SetupAssistant.extracter(param.Parameter_rpm,cmd.command_rpm,AppName, filesType)
+        
+        if filesType == ft.zip:
+            SetupAssistant.extracter(param.Parameter_zip,cmd.command_zip,AppName, filesType)
+
+        else:
+            print(f"{failColor}File type not detected{NormalColor}")
+
     except:
         print(f"{failColor}There was a problem saving the file{NormalColor}")
 
