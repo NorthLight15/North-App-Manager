@@ -29,7 +29,7 @@
  
  cd /North-App-Manager/
  
- python3 NorthAppManager.py
+ python3.10 NorthAppManager.py
  ```
  
  ## or 
@@ -39,5 +39,5 @@
 # Requirements 
 
 ```
-python3
+python3.10
 ```
