@@ -27,7 +27,7 @@
  
  git clone https://github.com/NorthLight15/North-App-Manager.git
  
- cd /North-App-Manager/src
+ cd /North-App-Manager/
  
  python3 NorthAppManager.py
  ```
