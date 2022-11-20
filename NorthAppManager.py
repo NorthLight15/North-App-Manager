@@ -2,7 +2,7 @@ import os
 import time
 import sys
 import json 
-import SetupAssistant as SetupAssistant, colorfont, installer
+import SetupAssistant, src.colorfont as colorfont, installer
 
 
 

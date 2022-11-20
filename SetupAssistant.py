@@ -1,4 +1,4 @@
-import colorfont
+import src.colorfont as colorfont
 import subprocess
 import os
 import time

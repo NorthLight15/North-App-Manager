@@ -2,13 +2,13 @@ import time
 import subprocess
 import random
 import requests as req
-import SetupAssistant
+import SetupAssistant 
 import yaml
 import os
-import colorfont
-from filesTypes import FilesType as ft
-from filesTypes import Commands as cmd
-from filesTypes import Paremeters as param
+import src.colorfont as colorfont
+from src.filesTypes import FilesType as ft
+from src.filesTypes import Commands as cmd
+from src.filesTypes import Paremeters as param
 from yaml import Loader
 
 
