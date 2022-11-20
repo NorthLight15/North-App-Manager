@@ -1,8 +1,11 @@
 import os
 import time
 import sys
-import json 
+import json
+import subprocess 
 import SetupAssistant, src.colorfont as colorfont, installer
+import distroCheck as distro
+from src.filesTypes import Distro
 
 
 
@@ -18,29 +21,60 @@ Succsess = colorfont.colors.SUCCSESS
 
 AppName = input("Application: ")
 
+def fail_message():
+    os.system("clear")
+    print(f"{failColor}Application not found..{NormalColor}")
+
+        
 
 if __name__ == '__main__':
+
+    
         
     os.system("clear")
-    try:
-        installer.apt_installer(AppName)
-        time.sleep(0.5)
-    except: 
-        installer.apt_get_installer(AppName)
-        time.sleep(0.5)
-    else:
-        installer.dnf_installer(AppName)
-        time.sleep(0.5)
-        installer.pacman_installer(AppName)
-        time.sleep(0.5)
-        try:
-            print(f"{OkeyColor}Wait...{NormalColor}")
-            installer.main_sources_installer(AppName)
-            print(f"{Succsess}Installed and Succsess configration...{NormalColor}")
-        except:
-                print(f"{warningColor}Application not found..{NormalColor}")
 
-                    
+    distro = distro.Distro_check()
+    print(distro)
+
+    if distro == Distro.Distro_ubuntu:
+        
+        try:
+            installer.apt_installer(AppName)
+            time.sleep(0.5)
+        
+        except:
+            fail_message()
+
+    else:
+        
+        if distro == Distro.Distro_debian:
+           
+            try:
+                installer.apt_get_installer(AppName)
+                time.sleep(0.5)
+            
+            except:
+                fail_message()
+
+        if distro == Distro.Distro_Fedora:
+           
+            try:
+                installer.rpm_installer(AppName)
+                time.sleep(0.5)
+            
+            except:
+                fail_message()
+
+        if distro == Distro.Distro_Arch:
+            try:
+                installer.pacman_installer(AppName)
+                time.sleep(0.5)
+            
+            except:
+                fail_message
+
+        else:
+            print("çalışmıyom")
 
 
 

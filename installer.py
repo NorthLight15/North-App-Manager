@@ -6,9 +6,11 @@ import SetupAssistant
 import yaml
 import os
 import src.colorfont as colorfont
+import distroCheck as distro
 from src.filesTypes import FilesType as ft
 from src.filesTypes import Commands as cmd
 from src.filesTypes import Paremeters as param
+from src.filesTypes import Distro
 from yaml import Loader
 
 
@@ -28,7 +30,6 @@ def main_sources_installer(App):
     AppName = data[App][3] # Sources Application name
     link = data[App][1] # Sources Application direct link
     filesType = data[App][2] # Sources Application files type
-    dir = os.getcwd()
     
 
     filesName = f"{AppName}{filesType}" # Combines the application name with the file type
@@ -36,13 +37,16 @@ def main_sources_installer(App):
     url = link
     try:
         print(f"{Succsess}Download started... Please not closed{NormalColor}")
-        r = req.get(url)
+        r = req.get(url) # Request for Download
     except:
         print(f"{failColor}We encountered an unknown error...{NormalColor}")
     try:
         print(f"{OkeyColor}Downloading and saving file...{NormalColor}")
-        open(f"{filesName}", 'wb').write(r.content)
+        open(f"{filesName}", 'wb').write(r.content) # Saves the computer
         
+
+        # Performs operations by file type
+
         if filesType == ft.tar_gz:
             SetupAssistant.extracter(cmd.command_tar_gz, param.Paremeter_tar_gz, AppName, filesType)
 
@@ -63,14 +67,20 @@ def main_sources_installer(App):
 
 
 
+# It checks these before looking at its own sources.
+
+
 def apt_installer(App):
    
     print(f"{OkeyColor}Trying apt{NormalColor}")
     try:              
         subprocess.check_call(f"sudo apt install {App}", shell=True)
         print(f"{Succsess}Downloaded...{NormalColor}")         
+    
     except (OSError, subprocess.SubprocessError): 
-        print(f"{warningColor}apt not working..{NormalColor}")             
+        print(f"{warningColor}apt not working..{NormalColor}")
+        
+        main_sources_installer(App)             
 
 
 
@@ -78,9 +88,11 @@ def apt_get_installer(App):
         print(f"{OkeyColor}Trying apt-get{NormalColor}")
         try:              
             subprocess.check_call(f"sudo apt-get install {App}", shell=True)
-            print("")         
+
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}apt-get not working..{NormalColor}")
+
+            main_sources_installer(App)        
 
 
 
@@ -91,6 +103,8 @@ def dnf_installer(App):
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}dnf not working..{NormalColor}")
 
+            main_sources_installer(App)        
+
 
 
 def pacman_installer(App):
@@ -100,5 +114,7 @@ def pacman_installer(App):
                 subprocess.check_call(f"sudo pacman -S {App}", shell=True)         
             except (OSError, subprocess.SubprocessError): 
                 print(f"{warningColor}pacman not working..{NormalColor}")
+
+                main_sources_installer(App)        
 
 

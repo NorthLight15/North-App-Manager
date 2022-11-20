@@ -20,5 +20,13 @@ class Paremeters:
         Parameter_rpm = "-i"
         Paremeter_zip = ""
 
+class Distro: 
+        Distro_ubuntu = "UBUNTU"
+        Distro_debian = "DEBIAN"
+        Distro_Fedora = "REDHAT"
+        Distro_Arch = "ARCH"
+        
+
+
 
     

@@ -1,4 +1,5 @@
 import src.colorfont as colorfont
+import src.filesTypes as filesTypes
 import subprocess
 import os
 import time
@@ -9,7 +10,7 @@ sucsessMessage = f"{colorfont.colors.SUCCSESS}Extract Succsess{colorfont.colors.
 def extracter(commands, parameters, AppName, ftype):
         
         
-        osCommand = f"{commands} {parameters} {AppName}{ftype}"
+        osCommand = f"sudo {commands} {parameters} {AppName}{ftype}"
         
         try:
             subprocess.check_call(osCommand, shell=True)
@@ -17,6 +18,7 @@ def extracter(commands, parameters, AppName, ftype):
     
         except (OSError, subprocess.SubprocessError): 
             print(errorMessage)
+
 
 
             

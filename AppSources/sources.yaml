@@ -50,3 +50,19 @@ brave:
 - https://github.com/brave/brave-browser/releases/download/v1.47.85/brave-browser-nightly-1.47.85-linux-amd64.zip
 - .zip
 - brave
+
+
+
+
+
+
+########################################################################################################################################
+                                                        #DEBIAN#
+########################################################################################################################################
+
+opera:
+
+- opera
+- https://download.opera.com/download/get/?id=59544&location=424&nothanks=yes&sub=marine&utm_tryagain=yes
+- .deb
+- opera
