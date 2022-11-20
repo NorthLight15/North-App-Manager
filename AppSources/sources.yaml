@@ -51,6 +51,20 @@ brave:
 - .zip
 - brave
 
+intellij idea:
+
+- JetBrains
+- https://download.jetbrains.com/idea/ideaIU-2022.2.3.tar.gz
+- .tar.gz
+- idea
+
+pycharm:
+
+- JetBrains
+- https://download.jetbrains.com/python/pycharm-professional-2022.2.4.tar.gz
+- .tar.gz
+- pycharm
+
 
 
 

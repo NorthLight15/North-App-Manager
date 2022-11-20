@@ -19,7 +19,8 @@ OkeyColor = colorfont.colors.OKEY
 Succsess = colorfont.colors.SUCCSESS
 
 
-AppName = input("Application: ")
+App = input("Application: ")
+AppName = App.lower()
 
 def fail_message():
     os.system("clear")
@@ -30,11 +31,8 @@ def fail_message():
 if __name__ == '__main__':
 
     
-        
-    os.system("clear")
 
     distro = distro.Distro_check()
-    print(distro)
 
     if distro == Distro.Distro_ubuntu:
         
@@ -71,10 +69,10 @@ if __name__ == '__main__':
                 time.sleep(0.5)
             
             except:
-                fail_message
+                fail_message()
 
         else:
-            print("çalışmıyom")
+            print("Linux Distro not found...")
 
 
 
