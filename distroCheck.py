@@ -1,7 +1,7 @@
 import os
 import platform 
 
-
+# Distro Check function
 def Distro_check():
    
    platform_load =  platform.freedesktop_os_release()

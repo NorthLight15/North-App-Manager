@@ -65,14 +65,12 @@ pycharm:
 - .tar.gz
 - pycharm
 
+filezilla:
 
-
-
-
-
-########################################################################################################################################
-                                                        #DEBIAN#
-########################################################################################################################################
+- FilleZilla
+- https://dl3.cdn.filezilla-project.org/client/FileZilla_3.62.1_i686-linux-gnu.tar.bz2?h=xn-otEQIKApS9hie3JBRdA&x=1669045817
+- .tar.bz2
+- filezilla
 
 opera:
 
@@ -80,3 +78,99 @@ opera:
 - https://download.opera.com/download/get/?id=59544&location=424&nothanks=yes&sub=marine&utm_tryagain=yes
 - .deb
 - opera
+
+kdenlive:
+
+- KdenLive
+- https://download.kde.org/stable/kdenlive/22.08/linux/kdenlive-22.08.3-x86_x64.AppImage
+- .AppImage
+- kdenlive
+
+openshot:
+
+- OpenShot
+- https://github.com/OpenShot/openshot-qt/releases/download/v2.6.1/OpenShot-v2.6.1-x86_64.AppImage
+- .AppImage
+- openshot
+
+chrome.deb:
+
+- Google
+- https://www.google.com/intl/tr_tr/chrome/thank-you.html?statcb=0&installdataindex=empty&defaultbrowser=0#
+- .deb
+- chrome
+
+chrome.rpm:
+
+- Google
+- https://www.google.com/intl/tr_tr/chrome/thank-you.html?statcb=0&installdataindex=empty&defaultbrowser=0#
+- .rpm
+- chrome
+
+clion:
+
+- JetBrains
+- https://download.jetbrains.com/cpp/CLion-2022.2.4.tar.gz
+- .tar.gz
+- clion
+
+goland:
+
+- JetBrains
+- https://download.jetbrains.com/go/goland-2022.2.4.tar.gz
+- .tar.gz
+- goland
+
+ventoy:
+
+- Ventoy
+- https://github.com/ventoy/Ventoy/releases/download/v1.0.82/ventoy-1.0.82-linux.tar.gz
+- .tar.gz
+- ventoy
+
+codeblocks:
+- CodeBlocks
+- https://downloads.sourceforge.net/project/codeblocks/Binaries/20.03/Linux/Debian%209/codeblocks_20.03_amd64_oldstable.tar.xz?ts=gAAAAABje5TuBQsqWYjRleZeT963uOWmOirZzCxro1kStOJaTy0eNLXntrcXfIW8KiTcy2nVLBSmjuAoGZ4yzHYOzp1D7MrR0Q%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fcodeblocks%2Ffiles%2FBinaries%2F20.03%2FLinux%2FDebian%25209%2Fcodeblocks_20.03_amd64_oldstable.tar.xz%2Fdownload
+- .tar.xz
+- codeblocks
+
+rider:
+
+- JetBrains
+- https://download.jetbrains.com/rider/JetBrains.Rider-2022.2.4.tar.gz
+- .tar.gz
+- rider
+
+rubymine:
+
+- JetBrains
+- https://download.jetbrains.com/ruby/RubyMine-2022.2.3.tar.gz
+- .tar.gz
+- rubymine
+
+python:
+
+- Python
+- https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tar.xz
+- .tar.xz
+- python
+
+golang:
+
+- Gooogle
+- https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
+- .tar.gz
+- golang
+
+
+#########################################################################################################################################
+                                                    #NORTH APP MANAGER UPDATE SYSTEM#
+#########################################################################################################################################
+
+sources:
+- NorthLight15
+- https://github.com/NorthLight15/North-App-Manager/blob/main/AppSources/sources.yaml
+- .yaml
+- sources
+
+# 23 Application

@@ -27,9 +27,13 @@ def main_sources_installer(App):
     data = yaml.load(file, Loader=Loader)
 
     # Application find for Searching code
+    
+    
+    developer = data[App][0] # Sources developer name 
     AppName = data[App][3] # Sources Application name
     link = data[App][1] # Sources Application direct link
     filesType = data[App][2] # Sources Application files type
+    
     
 
     filesName = f"{AppName}{filesType}" # Combines the application name with the file type
@@ -45,6 +49,7 @@ def main_sources_installer(App):
         open(f"{filesName}", 'wb').write(r.content) # Saves the computer
         
 
+
         # Performs operations by file type
 
         if filesType == ft.tar_gz:
@@ -52,6 +57,9 @@ def main_sources_installer(App):
 
         if filesType == ft.tar_xz:
             SetupAssistant.extracter(cmd.command_tar_xz,param.Parameter_tar_xz,AppName, filesType)
+        
+        if filesType == ft.tar_bz2:
+            SetupAssistant.extracter(cmd.command_tar_bz2, param.Parameter_tar_bz2, AppName, filesType)
         
         if filesType == ft.deb:
             SetupAssistant.extracter(cmd.commnad_deb,param.Parameter_deb,AppName, filesType)
