@@ -21,6 +21,8 @@ OkeyColor = colorfont.colors.OKEY
 Succsess = colorfont.colors.SUCCSESS
 
 
+
+
 def main_sources_installer(App):
 
     file = open("AppSources/sources.yaml")
@@ -42,11 +44,13 @@ def main_sources_installer(App):
     try:
         print(f"{Succsess}Download started... Please not closed{NormalColor}")
         r = req.get(url) # Request for Download
+        print(f"Download Link: {link}")
     except:
         print(f"{failColor}We encountered an unknown error...{NormalColor}")
     try:
         print(f"{OkeyColor}Downloading and saving file...{NormalColor}")
         open(f"{filesName}", 'wb').write(r.content) # Saves the computer
+    
         
 
 
@@ -74,7 +78,6 @@ def main_sources_installer(App):
         print(f"{failColor}There was a problem saving the file{NormalColor}")
 
 
-
 # It checks these before looking at its own sources.
 
 
@@ -87,8 +90,8 @@ def apt_installer(App):
     
     except (OSError, subprocess.SubprocessError): 
         print(f"{warningColor}apt not working..{NormalColor}")
-        
-        main_sources_installer(App)             
+
+      
 
 
 
@@ -100,8 +103,7 @@ def apt_get_installer(App):
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}apt-get not working..{NormalColor}")
 
-            main_sources_installer(App)        
-
+    
 
 
 def dnf_installer(App):
@@ -111,7 +113,7 @@ def dnf_installer(App):
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}dnf not working..{NormalColor}")
 
-            main_sources_installer(App)        
+       
 
 
 
@@ -122,7 +124,6 @@ def pacman_installer(App):
                 subprocess.check_call(f"sudo pacman -S {App}", shell=True)         
             except (OSError, subprocess.SubprocessError): 
                 print(f"{warningColor}pacman not working..{NormalColor}")
-
-                main_sources_installer(App)        
+       
 
 

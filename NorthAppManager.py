@@ -7,16 +7,17 @@ import SetupAssistant, src.colorfont as colorfont, installer
 import distroCheck as distro
 from src.filesTypes import Distro
 
-
-
-
-print("Application install manager for Linux")
-
 warningColor = colorfont.colors.WARNING
 failColor = colorfont.colors.FAIL
 NormalColor = colorfont.colors.END
 OkeyColor = colorfont.colors.OKEY
 Succsess = colorfont.colors.SUCCSESS
+
+
+attention = "Attention! Some of the applications you will download with this application have a user agreement, please pay attention to the user agreement of the application you will download."
+print("Application install manager for Linux")
+print(f"{warningColor}{attention}{NormalColor}")
+
 
 
 App = input("Application: ")
@@ -31,8 +32,15 @@ def fail_message():
 if __name__ == '__main__':
 
     
+    try:
+        distro = distro.Distro_check()
+    except:
+        print(f"{warningColor}Distributed could not be checked{NormalColor}")
+        try:
+            installer.main_sources_installer(AppName)
+        except:
+            print(f"{failColor}Application not found...{NormalColor}")
 
-    distro = distro.Distro_check()
 
     if distro == Distro.Distro_ubuntu:
         
