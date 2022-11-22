@@ -1,43 +1,49 @@
 # North-App-Manager
 
-<p>Simple download and file manager for Linux users</p>
-<h4>Version status: Beta</h4>
+Simple application and source file download manager for Linux users
 
-# What does it do
+![Beta Version](https://img.shields.io/badge/Version-Beta-F05032?style=for-the-badge&logo=github)
 
-<p>Linux distributions are an operating system that takes some time for standard users to get used to, Linux application manager is software that makes it easy to download applications from the main source for everyone to use.</p>
+# What Does It Do?
 
-## Fast and reliable
+Linux distributions are operating systems that takes some time for standard users to get used to. Linux application managers are softwares that makes downloading applications from their main source easy for everyone to use. This program is yet another source manager.
 
-<p> North App Manager It is primarily open source software, all sources are taken from AppSources/sources.yaml and all downloads are from the original manufacturer source.</p>
+## Fast and Reliable
 
-## How does it work
+North App Manager is primarily open source software, all sources are taken from AppSources/sources.yaml and all downloads provided from original manufacturer sources.
 
-<p> First, it searches for the file you specified with local packaging tools, if there is no result, it looks at its own sources, and if it is in their source, it downloads it and extracts the file for you.</p>
+## How Does It Work?
 
-## How to use.
+Firstly, it searches for the file you specified with local package managers, if they cannot find the specified package then it looks at its own sources, and if there is a match, it downloads and extracts the files for you.
 
-----------
+# How To Use
 
+## Requirements
 
-# How to clone and run
+![Python 3.10](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
+## Installation
+
+Be sure you have git on your system.
+
+```sh
+sudo apt install git		# On Debian
+sudo pacman -S git			# On Arch Linux
+sudo dnf install git 		# On Fedora
+sudo zypper in git			# On OpenSuse
+sudo emerge --ask git		# On Gentoo
+sudo xbps-install xtools 	# On Void Linux
 ```
- sudo apt{your local file manager} install git
- 
- git clone https://github.com/NorthLight15/North-App-Manager.git
- 
- cd /North-App-Manager/
- 
- python3.10 NorthAppManager.py
- ```
- 
- ## or 
- 
- - [Download North App Manager ZIP file](https://github.com/NorthLight15/North-App-Manager/archive/refs/heads/main.zip)
- 
-# Requirements 
 
+Then you can clone this repository and run the program:
+```sh
+git clone https://github.com/NorthLight15/North-App-Manager.git
+cd North-App-Manager/
+./NorthAppManager.py
 ```
-python3.10
+
+**or just** download [North App Manager ZIP file](https://github.com/NorthLight15/North-App-Manager/archive/refs/heads/main.zip), extract it and run the app with the command below:
+
+```sh
+ ./NorthAppManager.py
 ```
