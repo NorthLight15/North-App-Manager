@@ -12,7 +12,7 @@ from src.filesTypes import Commands as cmd
 from src.filesTypes import Paremeters as param
 from src.filesTypes import Distro
 from yaml import Loader
-
+import sys
 
 warningColor = colorfont.colors.WARNING
 failColor = colorfont.colors.FAIL
@@ -43,8 +43,9 @@ def main_sources_installer(App):
     url = link
     try:
         print(f"{Succsess}Download started... Please not closed{NormalColor}")
-        r = req.get(url) # Request for Download
         print(f"Download Link: {link}")
+        r = req.get(url) # Request for Download
+
     except:
         print(f"{failColor}We encountered an unknown error...{NormalColor}")
     try:
@@ -90,6 +91,7 @@ def apt_installer(App):
     
     except (OSError, subprocess.SubprocessError): 
         print(f"{warningColor}apt not working..{NormalColor}")
+        main_sources_installer(App)
 
       
 
@@ -102,6 +104,7 @@ def apt_get_installer(App):
 
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}apt-get not working..{NormalColor}")
+            main_sources_installer(App)
 
     
 
@@ -112,6 +115,7 @@ def dnf_installer(App):
             subprocess.check_call(f"sudo dnf install {App}", shell=True)         
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}dnf not working..{NormalColor}")
+            main_sources_installer(App)
 
        
 
@@ -124,6 +128,4 @@ def pacman_installer(App):
                 subprocess.check_call(f"sudo pacman -S {App}", shell=True)         
             except (OSError, subprocess.SubprocessError): 
                 print(f"{warningColor}pacman not working..{NormalColor}")
-       
-
-
+                main_sources_installer(App)

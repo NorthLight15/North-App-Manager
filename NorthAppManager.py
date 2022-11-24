@@ -7,6 +7,7 @@ import SetupAssistant, src.colorfont as colorfont, installer
 import distroCheck as distro
 from src.filesTypes import Distro
 
+
 warningColor = colorfont.colors.WARNING
 failColor = colorfont.colors.FAIL
 NormalColor = colorfont.colors.END
@@ -43,44 +44,22 @@ if __name__ == '__main__':
 
 
     if distro == Distro.Distro_ubuntu:
-        
-        try:
             installer.apt_installer(AppName)
             time.sleep(0.5)
-        
-        except:
-            fail_message()
+    
+    if distro == Distro.Distro_debian:
 
-    else:
-        
-        if distro == Distro.Distro_debian:
-           
-            try:
                 installer.apt_get_installer(AppName)
                 time.sleep(0.5)
             
-            except:
-                fail_message()
-
-        if distro == Distro.Distro_Fedora:
-           
-            try:
+    if distro == Distro.Distro_Fedora:
                 installer.rpm_installer(AppName)
                 time.sleep(0.5)
             
-            except:
-                fail_message()
 
-        if distro == Distro.Distro_Arch:
-            try:
+    if distro == Distro.Distro_Arch:
                 installer.pacman_installer(AppName)
                 time.sleep(0.5)
-            
-            except:
-                fail_message()
-
-        else:
-            print("Linux Distro not found...")
 
 
 
