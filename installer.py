@@ -102,6 +102,8 @@ def main_sources_installer(App):
     except:
         print(f"{failColor}There was a problem saving the file{NormalColor}")
 
+        SetupAssistant.installersh_setup(App) #setup manager.
+
 
 # It checks these before looking at its own sources.
 
@@ -116,6 +118,7 @@ def apt_installer(App):
     except (OSError, subprocess.SubprocessError): 
         print(f"{warningColor}apt not working..{NormalColor}")
         main_sources_installer(App)
+    
 
       
 
@@ -129,6 +132,7 @@ def apt_get_installer(App):
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}apt-get not working..{NormalColor}")
             main_sources_installer(App)
+            
 
     
 
@@ -140,6 +144,7 @@ def dnf_installer(App):
         except (OSError, subprocess.SubprocessError): 
             print(f"{warningColor}dnf not working..{NormalColor}")
             main_sources_installer(App)
+            
 
        
 
@@ -153,6 +158,7 @@ def pacman_installer(App):
             except (OSError, subprocess.SubprocessError): 
                 print(f"{warningColor}pacman not working..{NormalColor}")
                 main_sources_installer(App)
+                
 
 def zypper_installer(App):
     print(f"{OkeyColor} Trying zypper{NormalColor}")
@@ -162,3 +168,4 @@ def zypper_installer(App):
     except (OSError, subprocess.SubprocessError):
         print(f"{warningColor}zypper not working... {NormalColor}")
         main_sources_installer(App)
+        

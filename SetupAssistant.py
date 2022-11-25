@@ -32,7 +32,20 @@ def extracter(commands, parameters, AppName, ftype):
     
         except (OSError, subprocess.SubprocessError): 
             print(errorMessage)
+
+
+
+def installersh_setup(extFileName):
+    check = os.path.isfile(f"/{extFileName}/install.sh")
     
+    if check == True:
+        print("Install.sh detected, setup started.")
+        os.system(f"cd /{extFileName}/install.sh")
+        os.system("chmod +x install.sh")
+        os.system("./install.sh")
+
+    else:
+        pass
 
 
 
