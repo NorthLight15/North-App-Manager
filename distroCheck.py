@@ -1,3 +1,12 @@
+'''
+Made for file checking
+Python 3.10 Platform libary used.
+
+
+'''
+
+
+
 import os
 import platform 
 

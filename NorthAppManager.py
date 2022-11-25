@@ -1,4 +1,25 @@
 #!/bin/env python3
+
+'''
+
+
+We use this file to assemble elementary particles
+This is the file that the end user will use.
+All libraries are combined here to form a logical part and distribution controls are made here.
+
+
+
+'''
+
+
+
+
+
+
+
+
+
+
 import os
 import time
 import sys
@@ -8,7 +29,7 @@ import SetupAssistant, src.colorfont as colorfont, installer
 import distroCheck as distro
 from src.filesTypes import Distro
 
-
+# Termianal font color 
 warningColor = colorfont.colors.WARNING
 failColor = colorfont.colors.FAIL
 NormalColor = colorfont.colors.END
@@ -22,10 +43,11 @@ print(f"{warningColor}{attention}{NormalColor}")
 
 
 
-App = input("Application: ")
+App = input("Input : ")
 AppName = App.lower()
 
 def fail_message():
+    # Fail system function.
     os.system("clear")
     print(f"{failColor}Application not found..{NormalColor}")
 
@@ -33,9 +55,11 @@ def fail_message():
 
 if __name__ == '__main__':
 
+    # Distro check and controls. 
+
     
     try:
-        distro = distro.Distro_check()
+        distro = distro.Distro_check() # Distro check
     except:
         print(f"{warningColor}Distributed could not be checked{NormalColor}")
         try:
@@ -61,6 +85,10 @@ if __name__ == '__main__':
     if distro == Distro.Distro_Arch:
                 installer.pacman_installer(AppName)
                 time.sleep(0.5)
+
+    if distro == Distro.Distro_OpenSuse:
+        installer.zypper_installer(AppName)
+        time.sleep(0.5)
 
 
 

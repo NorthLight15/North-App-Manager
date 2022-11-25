@@ -1,3 +1,27 @@
+
+"""
+This file is mainly for download.
+Documentation in the AppSources.yaml version splits the data into pieces and creates a full filename
+Then a request is sent to the link and the file is downloaded over the request.
+
+After downloading, the file is extracted with the filename in AppSources and the SetupAssistant file.
+
+If there is that application in the package manager, download and install it directly from the package manager.
+
+
+
+
+"""
+
+
+
+
+
+
+
+
+
+
 import time
 import subprocess
 import random
@@ -7,8 +31,8 @@ import yaml
 import os
 import src.colorfont as colorfont
 import distroCheck as distro
-from src.filesTypes import FilesType as ft
-from src.filesTypes import Commands as cmd
+from src.filesTypes import FilesType as ft # Files Type detector function
+from src.filesTypes import Commands as cmd 
 from src.filesTypes import Paremeters as param
 from src.filesTypes import Distro
 from yaml import Loader
@@ -129,3 +153,12 @@ def pacman_installer(App):
             except (OSError, subprocess.SubprocessError): 
                 print(f"{warningColor}pacman not working..{NormalColor}")
                 main_sources_installer(App)
+
+def zypper_installer(App):
+    print(f"{OkeyColor} Trying zypper{NormalColor}")
+    
+    try:
+        subprocess.check_call(f"sudo zypper in {App}", shell= True)
+    except (OSError, subprocess.SubprocessError):
+        print(f"{warningColor}zypper not working... {NormalColor}")
+        main_sources_installer(App)

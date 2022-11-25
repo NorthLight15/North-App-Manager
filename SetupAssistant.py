@@ -1,3 +1,15 @@
+'''
+
+
+It is designed for file separation and installation.
+
+It performs file extraction by working without being seen in the terminal.
+
+'''
+
+
+
+
 import src.colorfont as colorfont
 import src.filesTypes as filesTypes
 import subprocess

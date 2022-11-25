@@ -28,7 +28,7 @@ class Distro:
         Distro_debian = "DEBIAN"
         Distro_Fedora = "REDHAT"
         Distro_Arch = "ARCH"
-        
+        Distro_OpenSuse = "OPENSUSE"
 
 
 
