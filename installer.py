@@ -67,7 +67,8 @@ def main_sources_installer(App):
     url = link
     try:
         print(f"{Succsess}Download started... Please not closed{NormalColor}")
-        print(f"Download Link: {link}")
+        print(f"{warningColor}Download Link: {link}{NormalColor}")
+        print(f"Developer: {developer}")
         r = req.get(url) # Request for Download
 
     except:
