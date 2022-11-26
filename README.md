@@ -18,6 +18,10 @@ Firstly, it searches for the file you specified with local package managers, if 
 
 # How To Use
 
+
+https://user-images.githubusercontent.com/85369831/204084236-68361770-7f23-42eb-bc1f-cf1bd9c310c2.mp4
+
+
 ## Requirements
 
 ![Python 3.10](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)
