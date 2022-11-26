@@ -2,7 +2,7 @@
 
 Simple application and source file download manager for Linux users
 
-![Beta Version](https://img.shields.io/badge/Version-Beta-F05032?style=for-the-badge&logo=github)
+![Beta Version](https://img.shields.io/badge/Version-RED1.0.0-F05032?style=for-the-badge&logo=github)
 
 # What Does It Do?
 
