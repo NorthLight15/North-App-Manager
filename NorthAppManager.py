@@ -67,6 +67,14 @@ if __name__ == '__main__':
         except:
             print(f"{failColor}Application not found...{NormalColor}")
 
+        else:
+            try:
+                installer.pip_installer(App)
+                print(f"{warningColor}Trying python pip installer{NormalColor}")
+            except:
+                print(f"{failColor}pip not working{NormalColor}")
+
+
 
     if distro == Distro.Distro_ubuntu:
             installer.apt_installer(AppName)

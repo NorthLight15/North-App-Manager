@@ -170,3 +170,12 @@ def zypper_installer(App):
         print(f"{warningColor}zypper not working... {NormalColor}")
         main_sources_installer(App)
         
+
+def pip_installer(App):
+        print(f"{OkeyColor} Trying zypper{NormalColor}")
+    
+        try:
+            subprocess.check_call(f"sudo pip install {App}", shell= True)
+        except (OSError, subprocess.SubprocessError):
+            print(f"{warningColor}pip not working... {NormalColor}")
+    
