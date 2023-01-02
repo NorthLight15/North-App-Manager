@@ -27,16 +27,19 @@ import subprocess
 import random
 import requests as req
 import SetupAssistant 
-import yaml
 import os
 import src.colorfont as colorfont
 import distroCheck as distro
+import yaml
 from src.filesTypes import FilesType as ft # Files Type detector function
 from src.filesTypes import Commands as cmd 
 from src.filesTypes import Paremeters as param
 from src.filesTypes import Distro
 from yaml import Loader
 import sys
+
+
+
 
 warningColor = colorfont.colors.WARNING
 failColor = colorfont.colors.FAIL
@@ -68,7 +71,11 @@ def main_sources_installer(App):
     try:
         print(f"{Succsess}Download started... Please not closed{NormalColor}")
         print(f"{warningColor}Download Link: {link}{NormalColor}")
+        print(f" ********* App Info **********")
+        print(f"\nApplication: {developer}")
         print(f"Developer: {developer}")
+        print(f"File Type: {filesType}")
+        
         r = req.get(url) # Request for Download
 
     except:

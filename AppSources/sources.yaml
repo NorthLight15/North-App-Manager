@@ -264,6 +264,11 @@ node:
   - .tar.gz
   - nodejs
 
+  update:
+    - NorthLight15
+    - https://github.com/NorthLight15/North-App-Manager/archive/refs/heads/main.zip
+    - .zip
+    - North-App-Manager
 
 
 #########################################################################################################################################

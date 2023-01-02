@@ -51,13 +51,8 @@ def fail_message():
     os.system("clear")
     print(f"{failColor}Application not found..{NormalColor}")
 
+def main():
         
-
-if __name__ == '__main__':
-
-    # Distro check and controls. 
-
-    
     try:
         distro = distro.Distro_check() # Distro check
     except:
@@ -97,6 +92,10 @@ if __name__ == '__main__':
     if distro == Distro.Distro_OpenSuse:
         installer.zypper_installer(AppName)
         time.sleep(0.5)
+
+
+if __name__ == '__main__':
+    main()
 
 
 
